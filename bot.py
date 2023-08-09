@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 API_ID = environ.get('API_ID')
 API_HASH = environ.get('API_HASH')
 BOT_TOKEN = environ.get('BOT_TOKEN')
-API_KEY = environ.get('API_KEY', 'deca8552d6bfa7f9e86bc34290214c116036d5de')
+API_KEY = environ.get('API_KEY', 'f61785736ea26f694e24ab6f6791af528f9e14f0')
 
 bot = Client('pdiskshortner bot',
              api_id=API_ID,
@@ -19,7 +19,7 @@ bot = Client('pdiskshortner bot',
 async def start(bot, message):
     await message.reply(
         f"**Hi {message.chat.first_name}!**\n\n"
-        "I'm ZA.GL link bot. Just send me link and get short link")
+        "I'm CPM Converter. Just send me link and get short link")
 
 
 @bot.on_message(filters.regex(r'https?://[^\s]+') & filters.private)
@@ -37,7 +37,7 @@ Here is your  [Short Link]({short_link})''', quote=True)
 
 
 async def get_shortlink(link):
-    url = 'http://za.gl/api'
+    url = 'https://cpm.link/api'
     params = {'api': API_KEY, 'url': link}
 
     async with aiohttp.ClientSession() as session:

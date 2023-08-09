@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 API_ID = environ.get('API_ID')
 API_HASH = environ.get('API_HASH')
 BOT_TOKEN = environ.get('BOT_TOKEN')
-API_KEY = environ.get('API_KEY', '')
+API_KEY = environ.get('API_KEY', 'fa017cb9cb302120ee7ce1661d3b065e6239f06c')
 
 bot = Client('pdiskshortner bot',
              api_id=API_ID,
@@ -37,7 +37,7 @@ Here is your  [Short Link]({short_link})''', quote=True)
 
 
 async def get_shortlink(link):
-    url = 'https://cpm.link/api'
+    url = 'https://semawur.com/st/'
     params = {'api': API_KEY, 'url': link}
 
     async with aiohttp.ClientSession() as session:
